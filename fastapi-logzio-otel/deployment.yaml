@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastapi-app
+  namespace: api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fastapi-app
+  template:
+    metadata:
+      labels:
+        app: fastapi-app
+    spec:
+      containers:
+      - name: fastapi-app
+        image: smony/fastapi-app:latest
+        ports:
+        - containerPort: 8000
+        env:
+          - name: OTEL_SERVICE_NAME
+            value: "fastapi-app"
+          - name: OTEL_TRACES_EXPORTER
+            value: "otlp,console"
+          - name: OTEL_EXPORTER_OTLP_TRACES_ENDPOINT
+            value: "http://otel-collector.monitoring.svc.cluster.local:4317"
+          - name: OTEL_EXPORTER_OTLP_PROTOCOL
+            value: "grpc"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: fastapi-app
+  namespace: api
+spec:
+  selector:
+    app: fastapi-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8000
