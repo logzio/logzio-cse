@@ -1,3 +1,4 @@
+import logging
 from fastapi import FastAPI
 from opentelemetry import trace
 from opentelemetry.sdk.resources import Resource
@@ -8,6 +9,16 @@ from opentelemetry.sdk.trace.export import BatchSpanProcessor
 
 app = FastAPI()
 
+log_path = "/kapow/data/Logs/fastapi_app.log"
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    handlers=[
+        logging.FileHandler(log_path),
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger(__name__)
 
 resource = Resource(attributes={"service.name": "fastapi-app"})
 trace.set_tracer_provider(TracerProvider(resource=resource))
@@ -18,4 +29,5 @@ FastAPIInstrumentor.instrument_app(app)
 
 @app.get("/")
 def read_root():
+    logger.info("Root endpoint called")
     return {"Hello": "World"}

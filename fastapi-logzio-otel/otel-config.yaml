@@ -28,7 +28,7 @@ data:
       batch:
     exporters:
       logzio/traces:
-        account_token: "FnKDCxfAThdpcdScWfmvowHASPIXBQoo"
+        account_token: "<LOGZIO_TRACE_TOKEN>"
         region: "us"
       logging:
         loglevel: debug

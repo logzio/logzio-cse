@@ -27,6 +27,21 @@ spec:
             value: "http://otel-collector.monitoring.svc.cluster.local:4317"
           - name: OTEL_EXPORTER_OTLP_PROTOCOL
             value: "grpc"
+          - name: LOG_PATH
+            value: "/kapow/data/Logs/fastapi_app.log"
+        volumeMounts:
+        - name: log-volume
+          mountPath: /kapow/data
+      initContainers:
+      - name: init-create-log-dir
+        image: busybox
+        command: ["mkdir", "-p", "/kapow/data/Logs"]
+        volumeMounts:
+        - name: log-volume
+          mountPath: /kapow/data
+      volumes:
+      - name: log-volume
+        emptyDir: {}
 ---
 apiVersion: v1
 kind: Service
