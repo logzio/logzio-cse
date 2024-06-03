@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: django-app
+  namespace: api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: django-app
+  template:
+    metadata:
+      labels:
+        app: django-app
+    spec:
+      containers:
+      - name: django-app
+        image: smony/django-app:latest
+        ports:
+        - containerPort: 8000
+        env:
+          - name: OTEL_SERVICE_NAME
+            value: "django-app"
+          - name: OTEL_TRACES_EXPORTER
+            value: "otlp,console"
+          - name: OTEL_EXPORTER_OTLP_TRACES_ENDPOINT
+            value: "http://logzio-monitoring-otel-collector.monitoring.svc.cluster.local:4317"
+          - name: OTEL_EXPORTER_OTLP_PROTOCOL
+            value: "grpc"
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: django-app
+  namespace: api
+  labels:
+    app: django-app
+    component: backend
+spec:
+  selector:
+    app: django-app
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8000
