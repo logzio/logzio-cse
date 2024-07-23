@@ -1,0 +1,34 @@
+{
+  "create_sub_account": {
+    "accountName": "M4-Test",
+    "email": "email@logz.io",
+    "retentionDays": 7,
+    "sharingObjectsAccounts": [1162818],
+    "isFlexible": false,
+    "reservedDailyGB": "",
+    "maxDailyGB": 5,
+    "searchable": true,
+    "accessible": true,
+    "docSizeSetting": true
+  },
+  "create_api_key": {
+    "name": "m4-test-api-key"
+  },
+  "create_metric_account": {
+    "email": "sovanmony.lim@logz.io",
+    "accountName": "m4-test-metrics_account",
+    "planUts": 100,
+    "authorizedAccountsIds": []
+  },
+  "create_grafana_folder": {
+    "title": "Fabric Metrics"
+  },
+  "create_dashboard": {
+    "dashboard": {
+      "title": "Interface Metrics",
+      "panels": []
+    },
+    "folderId": 0,
+    "overwrite": false
+  }
+}

@@ -1,0 +1,11 @@
+{
+    "endpoints": {
+        "create_sub_account": "/account-management/time-based-accounts",
+        "create_api_key": "/api-tokens/sub-account",
+        "create_metric_account": "/account-management/metrics-accounts",
+        "create_grafana_folder": "/grafana/api/folders",
+        "get_all_grafana_data_sources": "/grafana/api/datasources/summary",
+        "get_dashboard_by_uid": "/grafana/api/dashboards/uid/{uid}",
+        "create_dashboard": "/grafana/api/dashboards/db"
+    }
+}
