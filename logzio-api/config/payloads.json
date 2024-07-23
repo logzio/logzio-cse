@@ -15,7 +15,7 @@
     "name": "m4-test-api-key"
   },
   "create_metric_account": {
-    "email": "sovanmony.lim@logz.io",
+    "email": "email@logz.io",
     "accountName": "m4-test-metrics_account",
     "planUts": 100,
     "authorizedAccountsIds": []

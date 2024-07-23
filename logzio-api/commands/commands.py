@@ -1,4 +1,5 @@
 import click
+import os
 import json
 from api.api import make_api_request
 
@@ -13,6 +14,13 @@ def cli():
 
 def load_json(file_path):
     """Load JSON data from a file"""
+    # Validate the file path
+    if not os.path.isabs(file_path):
+        raise ValueError("The file path must be absolute")
+    
+    if not os.path.isfile(file_path):
+        raise FileNotFoundError(f"The file {file_path} does not exist")
+
     with open(file_path, 'r') as file:
         return json.load(file)
 

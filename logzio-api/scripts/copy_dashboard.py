@@ -3,6 +3,7 @@ import sys
 import json
 import subprocess
 import re
+import shlex
 from dotenv import load_dotenv, set_key
 
 # Add the root directory to the system path
@@ -30,7 +31,8 @@ except json.JSONDecodeError as e:
 
 def run_command(command):
     """Run a command and return the output"""
-    result = subprocess.run(command, shell=True, capture_output=True, text=True, cwd=BASE_DIR)
+    args = shlex.split(command)
+    result = subprocess.run(args, capture_output=True, text=True, cwd=BASE_DIR)
     if result.returncode != 0:
         print(f"Error running command: {command}")
         print(result.stderr)
