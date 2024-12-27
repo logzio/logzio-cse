@@ -41,7 +41,7 @@ Create a `.env` file in the root directory of the project and add your Logz.io A
 
 ```env
 MAIN_ACCOUNT_API_KEY=your_main_account_api_key
-SUB_ACCOUNT_API_KEY=your_sub_account_api_key
+SUB_ACCOUNTS_API_KEYS=your_sub_account_api_key_1,your_sub_account_api_key_2,your_sub_account_api_key_3
 ```
 
 ### Step 3: Run the Script

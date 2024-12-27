@@ -8,7 +8,7 @@ load_dotenv()
 
 # Get API keys from environment variables
 MAIN_ACCOUNT_API_KEY = os.getenv('MAIN_ACCOUNT_API_KEY')
-SUB_ACCOUNT_API_KEY = os.getenv('SUB_ACCOUNT_API_KEY')
+SUB_ACCOUNT_API_KEYS = os.getenv('SUB_ACCOUNT_API_KEYS').split(',')
 BASE_URL = "https://api.logz.io/v1"
 
 # Helper function to make API requests
@@ -48,7 +48,7 @@ def list_grafana_dashboards():
     return dashboards
 
 def copy_grafana_dashboard(dashboard_uid):
-    """Copy a Grafana dashboard from the main account to the sub-account"""
+    """Copy a Grafana dashboard from the main account to all sub-accounts"""
     # Fetch the dashboard from the main account
     endpoint = f"/grafana/api/dashboards/uid/{dashboard_uid}"
     dashboard_data = make_api_request(endpoint, MAIN_ACCOUNT_API_KEY)
@@ -64,20 +64,21 @@ def copy_grafana_dashboard(dashboard_uid):
     # Set the folder ID to the appropriate one in the sub-account (or 0 for the General folder)
     folder_id = 0
 
-    # Create the dashboard in the sub-account
-    endpoint = "/grafana/api/dashboards/db"
-    payload = {
-        "dashboard": dashboard,
-        "folderId": folder_id,
-        "overwrite": False
-    }
-    response = make_api_request(endpoint, SUB_ACCOUNT_API_KEY, method='POST', data=payload)
+    # Iterate over each sub-account API key and copy the dashboard
+    for api_key in SUB_ACCOUNT_API_KEYS:
+        endpoint = "/grafana/api/dashboards/db"
+        payload = {
+            "dashboard": dashboard,
+            "folderId": folder_id,
+            "overwrite": False
+        }
+        response = make_api_request(endpoint, api_key, method='POST', data=payload)
 
-    if response:
-        print(f"Dashboard '{dashboard['title']}' copied successfully.")
-    else:
-        print(f"Failed to copy dashboard '{dashboard['title']}'.")
-
+        if response:
+            print(f"Dashboard '{dashboard['title']}' copied successfully to sub-account with API key ending in '{api_key[-4:]}'.")
+        else:
+            print(f"Failed to copy dashboard '{dashboard['title']}' to sub-account with API key ending in '{api_key[-4:]}'.")
+    
 def main():
     # List all Grafana dashboards
     dashboards = list_grafana_dashboards()
