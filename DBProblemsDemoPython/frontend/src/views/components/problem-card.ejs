@@ -1,0 +1,17 @@
+<div class="bg-white shadow-md rounded-lg overflow-hidden">
+    <div class="p-4">
+      <h3 class="text-lg font-bold mb-2"><%= problem.name %></h3>
+      <p class="text-gray-600 text-sm mb-4"><%= problem.description %></p>
+      
+      <form id="form-<%= problem.id %>" action="/problem/<%= problem.id %>" method="post">
+        <button 
+          id="btn-<%= problem.id %>"
+          type="button"
+          onclick="triggerProblem('<%= problem.id %>')"
+          class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition-colors"
+          data-loading="Triggering...">
+          Trigger Problem
+        </button>
+      </form>
+    </div>
+  </div>

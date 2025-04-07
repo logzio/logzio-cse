@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %> | Database Problems Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script>
+        // Simple utility to trigger database problems
+        async function triggerProblem(id) {
+            const button = document.getElementById(`btn-${id}`);
+            const loadingText = button.getAttribute('data-loading') || 'Loading...';
+            const originalText = button.innerHTML;
+            
+            // Disable button and show loading state
+            button.disabled = true;
+            button.innerHTML = loadingText;
+            
+            try {
+                // Submit the form
+                document.getElementById(`form-${id}`).submit();
+            } catch (error) {
+                console.error('Error triggering problem:', error);
+                // Restore button state on error
+                button.disabled = false;
+                button.innerHTML = originalText;
+                
+                alert(`Error triggering problem: ${error.message}`);
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <header class="bg-blue-600 text-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold">DB Problems Demo</a>
+            <div>
+                <span class="mr-4">Instrumented with OpenTelemetry</span>
+                <a href="https://logz.io" target="_blank" class="px-4 py-2 bg-white text-blue-600 rounded font-semibold hover:bg-gray-100 transition-colors">
+                    LogzIO Demo
+                </a>
+            </div>
+        </div>
+    </header>
+    <main>
