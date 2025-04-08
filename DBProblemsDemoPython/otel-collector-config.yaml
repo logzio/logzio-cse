@@ -30,14 +30,14 @@ processors:
   
 exporters:
   logzio/logs:
-    account_token: "FtOOMeTcKFqjrvraelmMbDyKknJMJFIv"
+    account_token: "${LOGZIO_LOGS_TOKEN}"
     region: "us"
   prometheusremotewrite:
     endpoint: "https://listener.logz.io:8053"
     headers:
-      Authorization: "Bearer JFbBrDcClnlROMcQSrKBepOoLTWdGjYn"
+      Authorization: "Bearer ${LOGZIO_METRICS_TOKEN}"
   logzio/traces:
-    account_token: "XjJnrerksTykuxbIxsPYpmmYfmvwyQKX"
+    account_token: "${LOGZIO_TRACES_TOKEN}"
     region: "us"
     headers:
       user-agent: logzio-opentelemetry-traces

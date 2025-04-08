@@ -66,6 +66,10 @@ services:
     image: otel/opentelemetry-collector-contrib:latest
     container_name: otel-collector
     command: ["--config=/etc/otel-collector-config.yaml"]
+    environment:
+      - LOGZIO_LOGS_TOKEN=${LOGZIO_LOGS_TOKEN}
+      - LOGZIO_METRICS_TOKEN=${LOGZIO_METRICS_TOKEN}
+      - LOGZIO_TRACES_TOKEN=${LOGZIO_TRACES_TOKEN}
     volumes:
       - ./otel-collector-config.yaml:/etc/otel-collector-config.yaml
     ports:

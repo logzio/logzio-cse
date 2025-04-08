@@ -45,6 +45,7 @@ DBProblemsDemoPython/
 - Docker and Docker Compose
 - Git (for cloning the repository)
 - Internet connection (for pulling Docker images)
+- Logz.io account and tokens (for telemetry data)
 
 ## Getting Started
 
@@ -57,7 +58,24 @@ cd DBProblemsDemoPython
 
 ### Start the Application
 
+You can start the application in one of two ways:
+
+1. Using environment variables directly:
 ```bash
+LOGZIO_LOGS_TOKEN="your-logs-token" \
+LOGZIO_METRICS_TOKEN="your-metrics-token" \
+LOGZIO_TRACES_TOKEN="your-traces-token" \
+docker-compose up -d
+```
+
+2. Or by setting up a .env file:
+```bash
+# Create a .env file
+echo "LOGZIO_LOGS_TOKEN=your-logs-token
+LOGZIO_METRICS_TOKEN=your-metrics-token
+LOGZIO_TRACES_TOKEN=your-traces-token" > .env
+
+# Start the application
 docker-compose up -d
 ```
 
@@ -66,7 +84,7 @@ This command will:
 2. Start the MySQL database with initialization data
 3. Launch the backend service
 4. Start the frontend web interface
-5. Initialize the OpenTelemetry collector
+5. Initialize the OpenTelemetry collector with your Logz.io tokens
 6. Run a sample load generator
 
 ### Access the Application
@@ -118,6 +136,7 @@ If you encounter any issues:
 1. Ensure all required ports are available (3000, 5000, 3306)
 2. Check container logs for specific error messages
 3. Verify database connectivity from the backend container
+4. Verify your Logz.io tokens are correctly set and valid
 
 ## License
 
