@@ -1,0 +1,1440 @@
+=== Load Test Report: 20250406_162026 ===
+
+=== General Statistics ===
+Total requests: 474
+Errors: 236 (49.79%)
+Average response time: 0.2641 seconds
+Min response time: 0.0104 seconds
+Max response time: 7.3938 seconds
+50th percentile: 0.0258 seconds
+90th percentile: 0.8611 seconds
+99th percentile: 4.2061 seconds
+
+=== Endpoint Statistics ===
+/api/problems: 10 requests, 0.1335s avg, 0.00% errors
+/api/users: 318 requests, 0.2671s avg, 0.00% errors
+/api/problem/connection_timeout: 42 requests, 0.1669s avg, 0.00% errors
+/health: 64 requests, 0.1473s avg, 0.00% errors
+/api/problem/query_error: 39 requests, 0.4817s avg, 0.00% errors
+/api/problem/slow_query: 1 requests, 3.6672s avg, 3400.00% errors
+
+=== Status Code Distribution ===
+Status 200: 474 (100.00%)
+
+=== Error Details ===
+Error 1:
+  Timestamp: 2025-04-06 16:15:28.317230
+  Endpoint: /api/problem/memory_leak
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 2:
+  Timestamp: 2025-04-06 16:15:28.780424
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 3:
+  Timestamp: 2025-04-06 16:15:28.789317
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 4:
+  Timestamp: 2025-04-06 16:15:28.793180
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 5:
+  Timestamp: 2025-04-06 16:15:29.121287
+  Endpoint: /api/problem/table_lock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 6:
+  Timestamp: 2025-04-06 16:15:29.146059
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 7:
+  Timestamp: 2025-04-06 16:15:29.313084
+  Endpoint: /api/problem/memory_leak
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 8:
+  Timestamp: 2025-04-06 16:15:29.317533
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 9:
+  Timestamp: 2025-04-06 16:15:29.333658
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 10:
+  Timestamp: 2025-04-06 16:15:29.390682
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 11:
+  Timestamp: 2025-04-06 16:15:42.088620
+  Endpoint: /api/problem/connection_drop
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 12:
+  Timestamp: 2025-04-06 16:15:42.194773
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 13:
+  Timestamp: 2025-04-06 16:15:42.589680
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 14:
+  Timestamp: 2025-04-06 16:15:42.636198
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 15:
+  Timestamp: 2025-04-06 16:15:45.286043
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 16:
+  Timestamp: 2025-04-06 16:15:48.913464
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 17:
+  Timestamp: 2025-04-06 16:15:50.217511
+  Endpoint: /api/problem/memory_leak
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 18:
+  Timestamp: 2025-04-06 16:15:52.030581
+  Endpoint: /api/problem/memory_leak
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 19:
+  Timestamp: 2025-04-06 16:15:53.341213
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 20:
+  Timestamp: 2025-04-06 16:15:55.898301
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 21:
+  Timestamp: 2025-04-06 16:15:56.239045
+  Endpoint: /api/problem/connection_drop
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 22:
+  Timestamp: 2025-04-06 16:15:57.167832
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 23:
+  Timestamp: 2025-04-06 16:16:04.147838
+  Endpoint: /api/problem/table_lock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 24:
+  Timestamp: 2025-04-06 16:16:04.957227
+  Endpoint: /api/problem/table_lock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 25:
+  Timestamp: 2025-04-06 16:16:04.976125
+  Endpoint: /api/problem/connection_drop
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 26:
+  Timestamp: 2025-04-06 16:16:04.979186
+  Endpoint: /api/problem/slow_query
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 27:
+  Timestamp: 2025-04-06 16:16:05.485825
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 28:
+  Timestamp: 2025-04-06 16:16:08.098824
+  Endpoint: /api/problem/table_lock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 29:
+  Timestamp: 2025-04-06 16:16:08.627019
+  Endpoint: /api/problem/memory_leak
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 30:
+  Timestamp: 2025-04-06 16:16:09.973910
+  Endpoint: /api/problem/connection_drop
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 31:
+  Timestamp: 2025-04-06 16:16:14.018036
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 32:
+  Timestamp: 2025-04-06 16:16:15.210135
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 33:
+  Timestamp: 2025-04-06 16:16:17.054834
+  Endpoint: /api/problem/table_lock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 34:
+  Timestamp: 2025-04-06 16:16:17.062315
+  Endpoint: /api/problem/memory_leak
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 35:
+  Timestamp: 2025-04-06 16:16:17.327144
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 36:
+  Timestamp: 2025-04-06 16:16:17.662634
+  Endpoint: /api/problem/connection_drop
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 37:
+  Timestamp: 2025-04-06 16:16:19.132768
+  Endpoint: /api/problem/connection_drop
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 38:
+  Timestamp: 2025-04-06 16:16:20.862252
+  Endpoint: /api/problem/memory_leak
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 39:
+  Timestamp: 2025-04-06 16:16:21.409888
+  Endpoint: /api/problem/memory_leak
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 40:
+  Timestamp: 2025-04-06 16:16:24.054861
+  Endpoint: /api/problem/table_lock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 41:
+  Timestamp: 2025-04-06 16:16:25.517355
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 42:
+  Timestamp: 2025-04-06 16:16:26.703979
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 43:
+  Timestamp: 2025-04-06 16:16:28.513980
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 44:
+  Timestamp: 2025-04-06 16:16:28.578963
+  Endpoint: /api/problem/connection_drop
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 45:
+  Timestamp: 2025-04-06 16:16:29.868894
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 46:
+  Timestamp: 2025-04-06 16:16:30.381119
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 47:
+  Timestamp: 2025-04-06 16:16:30.750133
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 48:
+  Timestamp: 2025-04-06 16:16:32.198034
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 49:
+  Timestamp: 2025-04-06 16:16:35.860811
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 50:
+  Timestamp: 2025-04-06 16:16:35.888393
+  Endpoint: /api/problem/slow_query
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 51:
+  Timestamp: 2025-04-06 16:16:37.773064
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 52:
+  Timestamp: 2025-04-06 16:16:39.329193
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 53:
+  Timestamp: 2025-04-06 16:16:40.333690
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 54:
+  Timestamp: 2025-04-06 16:16:40.847153
+  Endpoint: /api/problem/connection_drop
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 55:
+  Timestamp: 2025-04-06 16:16:40.996648
+  Endpoint: /api/problem/table_lock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 56:
+  Timestamp: 2025-04-06 16:16:41.768820
+  Endpoint: /api/problem/slow_query
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 57:
+  Timestamp: 2025-04-06 16:16:42.053484
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 58:
+  Timestamp: 2025-04-06 16:16:46.546563
+  Endpoint: /api/problem/slow_query
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 59:
+  Timestamp: 2025-04-06 16:16:48.088361
+  Endpoint: /api/problem/memory_leak
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 60:
+  Timestamp: 2025-04-06 16:16:48.317596
+  Endpoint: /api/problem/table_lock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 61:
+  Timestamp: 2025-04-06 16:16:50.821730
+  Endpoint: /api/problem/memory_leak
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 62:
+  Timestamp: 2025-04-06 16:16:51.433558
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 63:
+  Timestamp: 2025-04-06 16:16:51.949284
+  Endpoint: /api/problem/slow_query
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 64:
+  Timestamp: 2025-04-06 16:16:52.047436
+  Endpoint: /api/problem/memory_leak
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 65:
+  Timestamp: 2025-04-06 16:16:53.026938
+  Endpoint: /api/problem/table_lock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 66:
+  Timestamp: 2025-04-06 16:16:53.291296
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 67:
+  Timestamp: 2025-04-06 16:16:53.643453
+  Endpoint: /api/problem/memory_leak
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 68:
+  Timestamp: 2025-04-06 16:16:57.339770
+  Endpoint: /api/problem/table_lock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 69:
+  Timestamp: 2025-04-06 16:16:59.411983
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 70:
+  Timestamp: 2025-04-06 16:16:59.435416
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 71:
+  Timestamp: 2025-04-06 16:17:02.988494
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 72:
+  Timestamp: 2025-04-06 16:17:03.232981
+  Endpoint: /api/problem/connection_drop
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 73:
+  Timestamp: 2025-04-06 16:17:03.456141
+  Endpoint: /api/problem/table_lock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 74:
+  Timestamp: 2025-04-06 16:17:05.024891
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 75:
+  Timestamp: 2025-04-06 16:17:05.279955
+  Endpoint: /api/problem/table_lock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 76:
+  Timestamp: 2025-04-06 16:17:06.604103
+  Endpoint: /api/problem/slow_query
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 77:
+  Timestamp: 2025-04-06 16:17:06.789585
+  Endpoint: /api/problem/slow_query
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 78:
+  Timestamp: 2025-04-06 16:17:09.313895
+  Endpoint: /api/problem/table_lock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 79:
+  Timestamp: 2025-04-06 16:17:12.228891
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 80:
+  Timestamp: 2025-04-06 16:17:12.251737
+  Endpoint: /api/problem/connection_drop
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 81:
+  Timestamp: 2025-04-06 16:17:13.888963
+  Endpoint: /api/problem/slow_query
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 82:
+  Timestamp: 2025-04-06 16:17:14.215418
+  Endpoint: /api/problem/table_lock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 83:
+  Timestamp: 2025-04-06 16:17:17.275010
+  Endpoint: /api/problem/connection_drop
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 84:
+  Timestamp: 2025-04-06 16:17:18.767899
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 85:
+  Timestamp: 2025-04-06 16:17:18.973708
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 86:
+  Timestamp: 2025-04-06 16:17:19.692511
+  Endpoint: /api/problem/slow_query
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 87:
+  Timestamp: 2025-04-06 16:17:20.348137
+  Endpoint: /api/problem/table_lock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 88:
+  Timestamp: 2025-04-06 16:17:21.416087
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 89:
+  Timestamp: 2025-04-06 16:17:23.736692
+  Endpoint: /api/problem/connection_drop
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 90:
+  Timestamp: 2025-04-06 16:17:24.703696
+  Endpoint: /api/problem/connection_drop
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 91:
+  Timestamp: 2025-04-06 16:17:24.976896
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 92:
+  Timestamp: 2025-04-06 16:17:25.502936
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 93:
+  Timestamp: 2025-04-06 16:17:28.138762
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 94:
+  Timestamp: 2025-04-06 16:17:29.574984
+  Endpoint: /api/problem/slow_query
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 95:
+  Timestamp: 2025-04-06 16:17:31.992833
+  Endpoint: /api/problem/table_lock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 96:
+  Timestamp: 2025-04-06 16:17:32.009860
+  Endpoint: /api/problem/memory_leak
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 97:
+  Timestamp: 2025-04-06 16:17:34.053281
+  Endpoint: /api/problem/connection_drop
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 98:
+  Timestamp: 2025-04-06 16:17:34.083283
+  Endpoint: /api/problem/memory_leak
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 99:
+  Timestamp: 2025-04-06 16:17:35.108676
+  Endpoint: /api/problem/table_lock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 100:
+  Timestamp: 2025-04-06 16:17:36.616783
+  Endpoint: /api/problem/slow_query
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 101:
+  Timestamp: 2025-04-06 16:17:36.774890
+  Endpoint: /api/problem/table_lock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 102:
+  Timestamp: 2025-04-06 16:17:37.279564
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 103:
+  Timestamp: 2025-04-06 16:17:41.740691
+  Endpoint: /api/problem/table_lock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 104:
+  Timestamp: 2025-04-06 16:17:43.124358
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 105:
+  Timestamp: 2025-04-06 16:17:43.957913
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 106:
+  Timestamp: 2025-04-06 16:17:44.711628
+  Endpoint: /api/problem/memory_leak
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 107:
+  Timestamp: 2025-04-06 16:17:45.934957
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 108:
+  Timestamp: 2025-04-06 16:17:46.141659
+  Endpoint: /api/problem/connection_drop
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 109:
+  Timestamp: 2025-04-06 16:17:47.528617
+  Endpoint: /api/problem/table_lock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 110:
+  Timestamp: 2025-04-06 16:17:47.687561
+  Endpoint: /api/problem/connection_drop
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 111:
+  Timestamp: 2025-04-06 16:17:49.128966
+  Endpoint: /api/problem/slow_query
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 112:
+  Timestamp: 2025-04-06 16:17:49.712600
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 113:
+  Timestamp: 2025-04-06 16:17:53.627852
+  Endpoint: /api/problem/slow_query
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 114:
+  Timestamp: 2025-04-06 16:17:55.255632
+  Endpoint: /api/problem/connection_drop
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 115:
+  Timestamp: 2025-04-06 16:17:56.477210
+  Endpoint: /api/problem/table_lock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 116:
+  Timestamp: 2025-04-06 16:17:56.712850
+  Endpoint: /api/problem/table_lock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 117:
+  Timestamp: 2025-04-06 16:17:58.022444
+  Endpoint: /api/problem/table_lock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 118:
+  Timestamp: 2025-04-06 16:17:59.808823
+  Endpoint: /api/problem/connection_drop
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 119:
+  Timestamp: 2025-04-06 16:18:01.806387
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 120:
+  Timestamp: 2025-04-06 16:18:02.154360
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 121:
+  Timestamp: 2025-04-06 16:18:02.435270
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 122:
+  Timestamp: 2025-04-06 16:18:05.379443
+  Endpoint: /api/problem/connection_drop
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 123:
+  Timestamp: 2025-04-06 16:18:05.856261
+  Endpoint: /api/problem/table_lock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 124:
+  Timestamp: 2025-04-06 16:18:08.713585
+  Endpoint: /api/problem/slow_query
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 125:
+  Timestamp: 2025-04-06 16:18:08.722217
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 126:
+  Timestamp: 2025-04-06 16:18:08.816778
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 127:
+  Timestamp: 2025-04-06 16:18:09.286783
+  Endpoint: /api/problem/memory_leak
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 128:
+  Timestamp: 2025-04-06 16:18:12.370747
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 129:
+  Timestamp: 2025-04-06 16:18:13.039560
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 130:
+  Timestamp: 2025-04-06 16:18:15.361799
+  Endpoint: /api/problem/connection_drop
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 131:
+  Timestamp: 2025-04-06 16:18:16.775543
+  Endpoint: /api/problem/memory_leak
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 132:
+  Timestamp: 2025-04-06 16:18:17.498295
+  Endpoint: /api/problem/connection_drop
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 133:
+  Timestamp: 2025-04-06 16:18:18.479158
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 134:
+  Timestamp: 2025-04-06 16:18:19.618239
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 135:
+  Timestamp: 2025-04-06 16:18:19.845536
+  Endpoint: /api/problem/table_lock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 136:
+  Timestamp: 2025-04-06 16:18:20.691901
+  Endpoint: /api/problem/memory_leak
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 137:
+  Timestamp: 2025-04-06 16:18:21.543056
+  Endpoint: /api/problem/memory_leak
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 138:
+  Timestamp: 2025-04-06 16:18:26.526130
+  Endpoint: /api/problem/connection_drop
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 139:
+  Timestamp: 2025-04-06 16:18:28.506127
+  Endpoint: /api/problem/connection_drop
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 140:
+  Timestamp: 2025-04-06 16:18:29.948516
+  Endpoint: /api/problem/connection_drop
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 141:
+  Timestamp: 2025-04-06 16:18:30.567775
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 142:
+  Timestamp: 2025-04-06 16:18:30.621418
+  Endpoint: /api/problem/slow_query
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 143:
+  Timestamp: 2025-04-06 16:18:31.190081
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 144:
+  Timestamp: 2025-04-06 16:18:31.215851
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 145:
+  Timestamp: 2025-04-06 16:18:31.420574
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 146:
+  Timestamp: 2025-04-06 16:18:31.955307
+  Endpoint: /api/problem/slow_query
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 147:
+  Timestamp: 2025-04-06 16:18:33.551012
+  Endpoint: /api/problem/memory_leak
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 148:
+  Timestamp: 2025-04-06 16:18:39.515918
+  Endpoint: /api/problem/connection_drop
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 149:
+  Timestamp: 2025-04-06 16:18:41.017486
+  Endpoint: /api/problem/memory_leak
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 150:
+  Timestamp: 2025-04-06 16:18:41.757433
+  Endpoint: /api/problem/slow_query
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 151:
+  Timestamp: 2025-04-06 16:18:41.898998
+  Endpoint: /api/problem/table_lock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 152:
+  Timestamp: 2025-04-06 16:18:42.715870
+  Endpoint: /api/problem/slow_query
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 153:
+  Timestamp: 2025-04-06 16:18:42.791009
+  Endpoint: /api/problem/slow_query
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 154:
+  Timestamp: 2025-04-06 16:18:42.829852
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 155:
+  Timestamp: 2025-04-06 16:18:43.920505
+  Endpoint: /api/problem/table_lock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 156:
+  Timestamp: 2025-04-06 16:18:45.488182
+  Endpoint: /api/problem/table_lock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 157:
+  Timestamp: 2025-04-06 16:18:48.885165
+  Endpoint: /api/problem/connection_drop
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 158:
+  Timestamp: 2025-04-06 16:18:50.849024
+  Endpoint: /api/problem/connection_drop
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 159:
+  Timestamp: 2025-04-06 16:18:53.197588
+  Endpoint: /api/problem/table_lock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 160:
+  Timestamp: 2025-04-06 16:18:54.183980
+  Endpoint: /api/problem/slow_query
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 161:
+  Timestamp: 2025-04-06 16:18:54.214857
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 162:
+  Timestamp: 2025-04-06 16:18:55.142071
+  Endpoint: /api/problem/slow_query
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 163:
+  Timestamp: 2025-04-06 16:18:55.421288
+  Endpoint: /api/problem/connection_drop
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 164:
+  Timestamp: 2025-04-06 16:18:55.780008
+  Endpoint: /api/problem/memory_leak
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 165:
+  Timestamp: 2025-04-06 16:18:56.283024
+  Endpoint: /api/problem/slow_query
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 166:
+  Timestamp: 2025-04-06 16:18:57.259309
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 167:
+  Timestamp: 2025-04-06 16:19:01.791525
+  Endpoint: /api/problem/slow_query
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 168:
+  Timestamp: 2025-04-06 16:19:02.228067
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 169:
+  Timestamp: 2025-04-06 16:19:05.383089
+  Endpoint: /api/problem/connection_drop
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 170:
+  Timestamp: 2025-04-06 16:19:06.746982
+  Endpoint: /api/problem/connection_drop
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 171:
+  Timestamp: 2025-04-06 16:19:07.004781
+  Endpoint: /api/problem/slow_query
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 172:
+  Timestamp: 2025-04-06 16:19:07.847365
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 173:
+  Timestamp: 2025-04-06 16:19:08.318547
+  Endpoint: /api/problem/table_lock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 174:
+  Timestamp: 2025-04-06 16:19:08.865003
+  Endpoint: /api/problem/slow_query
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 175:
+  Timestamp: 2025-04-06 16:19:09.143088
+  Endpoint: /api/problem/memory_leak
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 176:
+  Timestamp: 2025-04-06 16:19:10.785027
+  Endpoint: /api/problem/memory_leak
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 177:
+  Timestamp: 2025-04-06 16:19:14.356324
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 178:
+  Timestamp: 2025-04-06 16:19:14.915509
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 179:
+  Timestamp: 2025-04-06 16:19:16.095567
+  Endpoint: /api/problem/connection_drop
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 180:
+  Timestamp: 2025-04-06 16:19:19.665358
+  Endpoint: /api/problem/memory_leak
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 181:
+  Timestamp: 2025-04-06 16:19:19.706666
+  Endpoint: /api/problem/table_lock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 182:
+  Timestamp: 2025-04-06 16:19:20.449474
+  Endpoint: /api/problem/table_lock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 183:
+  Timestamp: 2025-04-06 16:19:20.766968
+  Endpoint: /api/problem/memory_leak
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 184:
+  Timestamp: 2025-04-06 16:19:22.332855
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 185:
+  Timestamp: 2025-04-06 16:19:22.960890
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 186:
+  Timestamp: 2025-04-06 16:19:24.743407
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 187:
+  Timestamp: 2025-04-06 16:19:25.958013
+  Endpoint: /api/problem/connection_drop
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 188:
+  Timestamp: 2025-04-06 16:19:26.058077
+  Endpoint: /api/problem/table_lock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 189:
+  Timestamp: 2025-04-06 16:19:27.264186
+  Endpoint: /api/problem/connection_drop
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 190:
+  Timestamp: 2025-04-06 16:19:30.768328
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 191:
+  Timestamp: 2025-04-06 16:19:30.824794
+  Endpoint: /api/problem/table_lock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 192:
+  Timestamp: 2025-04-06 16:19:33.776047
+  Endpoint: /api/problem/connection_drop
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 193:
+  Timestamp: 2025-04-06 16:19:34.387775
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 194:
+  Timestamp: 2025-04-06 16:19:35.050965
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 195:
+  Timestamp: 2025-04-06 16:19:35.689368
+  Endpoint: /api/problem/table_lock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 196:
+  Timestamp: 2025-04-06 16:19:36.612197
+  Endpoint: /api/problem/slow_query
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 197:
+  Timestamp: 2025-04-06 16:19:36.722871
+  Endpoint: /api/problem/slow_query
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 198:
+  Timestamp: 2025-04-06 16:19:37.068931
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 199:
+  Timestamp: 2025-04-06 16:19:38.150681
+  Endpoint: /api/problem/slow_query
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 200:
+  Timestamp: 2025-04-06 16:19:42.552059
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 201:
+  Timestamp: 2025-04-06 16:19:42.807581
+  Endpoint: /api/problem/memory_leak
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 202:
+  Timestamp: 2025-04-06 16:19:45.820480
+  Endpoint: /api/problem/slow_query
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 203:
+  Timestamp: 2025-04-06 16:19:46.559850
+  Endpoint: /api/problem/connection_drop
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 204:
+  Timestamp: 2025-04-06 16:19:47.587528
+  Endpoint: /api/problem/slow_query
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 205:
+  Timestamp: 2025-04-06 16:19:48.247245
+  Endpoint: /api/problem/memory_leak
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 206:
+  Timestamp: 2025-04-06 16:19:48.964334
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 207:
+  Timestamp: 2025-04-06 16:19:49.021985
+  Endpoint: /api/problem/memory_leak
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 208:
+  Timestamp: 2025-04-06 16:19:49.228130
+  Endpoint: /api/problem/table_lock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 209:
+  Timestamp: 2025-04-06 16:19:52.506459
+  Endpoint: /api/problem/slow_query
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 210:
+  Timestamp: 2025-04-06 16:19:54.029470
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 211:
+  Timestamp: 2025-04-06 16:19:55.734540
+  Endpoint: /api/problem/memory_leak
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 212:
+  Timestamp: 2025-04-06 16:19:57.012112
+  Endpoint: /api/problem/connection_drop
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 213:
+  Timestamp: 2025-04-06 16:19:58.684260
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 214:
+  Timestamp: 2025-04-06 16:19:59.671784
+  Endpoint: /api/problem/connection_drop
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 215:
+  Timestamp: 2025-04-06 16:19:59.842360
+  Endpoint: /api/problem/table_lock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 216:
+  Timestamp: 2025-04-06 16:20:00.416398
+  Endpoint: /api/problem/table_lock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 217:
+  Timestamp: 2025-04-06 16:20:02.001527
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 218:
+  Timestamp: 2025-04-06 16:20:02.690162
+  Endpoint: /api/problem/slow_query
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 219:
+  Timestamp: 2025-04-06 16:20:03.458201
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 220:
+  Timestamp: 2025-04-06 16:20:06.205970
+  Endpoint: /api/problem/deadlock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 221:
+  Timestamp: 2025-04-06 16:20:07.280903
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 222:
+  Timestamp: 2025-04-06 16:20:08.373138
+  Endpoint: /api/problem/slow_query
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 223:
+  Timestamp: 2025-04-06 16:20:11.004349
+  Endpoint: /api/problem/connection_drop
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 224:
+  Timestamp: 2025-04-06 16:20:12.379104
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 225:
+  Timestamp: 2025-04-06 16:20:12.656319
+  Endpoint: /api/problem/memory_leak
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 226:
+  Timestamp: 2025-04-06 16:20:12.748022
+  Endpoint: /api/problem/table_lock
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 227:
+  Timestamp: 2025-04-06 16:20:15.379249
+  Endpoint: /api/problem/memory_leak
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 228:
+  Timestamp: 2025-04-06 16:20:15.691597
+  Endpoint: /api/problem/memory_leak
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 229:
+  Timestamp: 2025-04-06 16:20:19.235810
+  Endpoint: /api/problem/slow_query
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 230:
+  Timestamp: 2025-04-06 16:20:19.250356
+  Endpoint: /api/problem/memory_leak
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 231:
+  Timestamp: 2025-04-06 16:20:19.612850
+  Endpoint: /api/problem/memory_leak
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 232:
+  Timestamp: 2025-04-06 16:20:22.311840
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 233:
+  Timestamp: 2025-04-06 16:20:22.869197
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 234:
+  Timestamp: 2025-04-06 16:20:23.607893
+  Endpoint: /api/problem/connection_pool_exhaustion
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 235:
+  Timestamp: 2025-04-06 16:20:24.065330
+  Endpoint: /api/problem/connection_drop
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+
+Error 236:
+  Timestamp: 2025-04-06 16:20:25.350116
+  Endpoint: /api/problem/memory_leak
+  Status: Exception
+  Message: HTTPConnectionPool(host='backend', port=5001): Read timed out. (read timeout=10)
+

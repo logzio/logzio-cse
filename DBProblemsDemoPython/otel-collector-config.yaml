@@ -1,0 +1,68 @@
+receivers:
+  otlp:
+    protocols:
+      grpc:
+        endpoint: 0.0.0.0:4317  # Change from localhost to 0.0.0.0
+      http:
+        endpoint: 0.0.0.0:4318  # Change from localhost to 0.0.0.0
+        cors:
+            allowed_origins:
+              - "*"
+            allowed_headers:
+              - "*"
+  
+processors:
+  batch:
+    timeout: 1s
+    send_batch_size: 1024
+  memory_limiter:
+    check_interval: 1s
+    limit_mib: 1500
+    spike_limit_mib: 512
+  attributes:
+    actions:
+      - key: environment
+        value: demo
+        action: insert
+  resourcedetection:
+    detectors:
+      - docker
+  
+exporters:
+  logzio/logs:
+    account_token: "${LOGZIO_LOGS_TOKEN}"
+    region: "us"
+  prometheusremotewrite:
+    endpoint: "https://listener.logz.io:8053"
+    headers:
+      Authorization: "Bearer ${LOGZIO_METRICS_TOKEN}"
+  logzio/traces:
+    account_token: "${LOGZIO_TRACES_TOKEN}"
+    region: "us"
+    headers:
+      user-agent: logzio-opentelemetry-traces
+  # debug:
+  #   verbosity: detailed
+  #   sampling_initial: 5
+  #   sampling_thereafter: 200
+
+service:
+  # telemetry:
+  #   logs:
+  #     level: "debug"
+    # metrics:
+    #   level: "detailed"
+    #   address: ":8888"
+  pipelines:
+    metrics:
+      receivers: [otlp]
+      processors: [memory_limiter, batch, attributes, resourcedetection]
+      exporters: [prometheusremotewrite]
+    logs:
+      receivers: [otlp]
+      processors: [memory_limiter, batch, attributes, resourcedetection]
+      exporters: [logzio/logs]
+    traces:
+      receivers: [otlp]
+      processors: [memory_limiter, batch, attributes, resourcedetection]
+      exporters: [logzio/traces]

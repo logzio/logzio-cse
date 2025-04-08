@@ -1,0 +1,96 @@
+<%- include('./partials/header') %>
+
+<div class="container mx-auto px-4 py-8">
+  <div class="text-center mb-10">
+    <h1 class="text-3xl font-bold mb-4">Database Problems Demo</h1>
+    <p class="text-lg text-gray-600 mb-4">
+      Click on any problem to trigger a common database issue for your LogzIO demo
+    </p>
+    <div class="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4 mb-6" role="alert">
+      <p class="font-bold">Note</p>
+      <p>All these problems are safely simulated and won't affect the actual database's stability.</p>
+    </div>
+  </div>
+
+  <% if (typeof error !== 'undefined' && error) { %>
+    <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-6" role="alert">
+      <p class="font-bold">Error</p>
+      <p><%= error %></p>
+    </div>
+  <% } %>
+
+  <% if (typeof results !== 'undefined' && results) { %>
+    <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mb-6" role="alert">
+      <p class="font-bold">Results for <%= results.name %></p>
+      <pre class="mt-2 p-2 bg-gray-100 rounded overflow-auto"><%= JSON.stringify(results.data, null, 2) %></pre>
+    </div>
+  <% } %>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+    <% problems.forEach(problem => { %>
+      <%- include('./components/problem-card', { problem }) %>
+    <% }); %>
+  </div>
+
+  <div class="mt-10">
+    <h2 class="text-2xl font-bold mb-4">Sample Database Data</h2>
+    <div class="overflow-x-auto">
+      <table class="min-w-full bg-white border border-gray-300">
+        <thead>
+          <tr>
+            <th class="py-2 px-4 border-b">ID</th>
+            <th class="py-2 px-4 border-b">Username</th>
+            <th class="py-2 px-4 border-b">Email</th>
+            <th class="py-2 px-4 border-b">Created</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% if (users && users.length > 0) { %>
+            <% users.forEach(user => { %>
+              <tr>
+                <td class="py-2 px-4 border-b"><%= user.id %></td>
+                <td class="py-2 px-4 border-b"><%= user.username %></td>
+                <td class="py-2 px-4 border-b"><%= user.email %></td>
+                <td class="py-2 px-4 border-b"><%= user.created_at %></td>
+              </tr>
+            <% }); %>
+          <% } else { %>
+            <tr>
+              <td colspan="4" class="py-4 px-4 border-b text-center">No users found</td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="mt-10">
+    <h2 class="text-2xl font-bold mb-4">Telemetry Information</h2>
+    <p class="mb-4">
+      This application is instrumented with OpenTelemetry. Traces and metrics are sent to the
+      OpenTelemetry Collector, which can forward them to LogzIO or any other observability platform.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="border rounded-lg p-4 bg-white">
+        <h3 class="text-lg font-bold mb-2">Components</h3>
+        <ul class="list-disc pl-5">
+          <li>Node.js Frontend (Express + EJS)</li>
+          <li>Python Backend (Flask)</li>
+          <li>MySQL Database</li>
+          <li>OpenTelemetry Collector</li>
+        </ul>
+      </div>
+      <div class="border rounded-lg p-4 bg-white">
+        <h3 class="text-lg font-bold mb-2">Instrumentation</h3>
+        <ul class="list-disc pl-5">
+          <li>HTTP/Express Tracing</li>
+          <li>Flask Tracing</li>
+          <li>MySQL Database Tracing</li>
+          <li>Cross-Service Distributed Tracing</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('./partials/footer') %>
